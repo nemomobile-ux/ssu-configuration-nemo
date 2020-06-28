@@ -1,0 +1,11 @@
+if [ "$SSU_RELEASE_TYPE" = "rnd" ]; then
+    [ -n "@RNDRELEASE@" ] && ssu release -r @RNDRELEASE@
+    [ -n "@RNDFLAVOUR@" ] && ssu flavour @RNDFLAVOUR@
+    # RELEASE is reused in RND setups with parallel release structures
+    # this makes sure that an image created from such a structure updates from there
+    [ -n "@RELEASE@" ] && ssu set update-version @RELEASE@
+    ssu mode 2
+else
+    [ -n "@RELEASE@" ] && ssu release @RELEASE@
+    ssu mode 4
+fi

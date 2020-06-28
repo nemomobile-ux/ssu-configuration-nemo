@@ -1,0 +1,7 @@
+(
+CUSTOMERS=$(find $INSTALL_ROOT/usr/share/ssu/features.d -name 'customer-*.ini' \
+    |xargs --no-run-if-empty sed -n 's/^name[[:space:]]*=[[:space:]]*//p')
+
+cat $INSTALL_ROOT/etc/os-release
+echo "SAILFISH_CUSTOMER=\"${CUSTOMERS//$'\n'/ }\""
+) > $IMG_OUT_DIR/os-release
