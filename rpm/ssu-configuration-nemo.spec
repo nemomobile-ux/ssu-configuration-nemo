@@ -1,4 +1,4 @@
-Name: 		ssuu-kickstart-configuration-nemo
+Name: 		ssu-kickstart-configuration-nemo
 Summary: 	Sample vendor configuration data
 Version:	1.0.0
 Release:	0
