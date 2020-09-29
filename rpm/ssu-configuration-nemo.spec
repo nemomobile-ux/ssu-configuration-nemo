@@ -10,6 +10,8 @@ Provides: 	ssu-kickstart-configuration
 Requires: 	ssu-ks >= 0.29
 Requires:	 grep
 
+BuildArch:	noarch
+
 %description
 Configuration required to build kickstarts using ssuks.
 
